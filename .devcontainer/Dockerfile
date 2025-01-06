@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/java:0-15
+FROM mcr.microsoft.com/devcontainers/java:21
 
 # This Dockerfile adds a non-root user with sudo access. Use the "remoteUser"
 # property in devcontainer.json to use it. On Linux, the container user's GID/UIDs
@@ -8,8 +8,8 @@ ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-ARG MAVEN_VERSION=3.6.3
-ARG MAVEN_SHA=c35a1803a6e70a126e80b2b3ae33eed961f83ed74d18fcd16909b2d44d7dada3203f1ffe726c17ef8dcca2dcaa9fca676987befeadc9b9f759967a8cb77181c0
+ARG MAVEN_VERSION=3.9.9
+ARG MAVEN_SHA=a555254d6b53d267965a3404ecb14e53c3827c09c3b94b5678835887ab404556bfaf78dcfe03ba76fa2508649dca8531c74bca4d5846513522404d48e8c4ac8b
 
 # COPY settings.xml /usr/share/maven/ref/settings.xml
 
@@ -49,4 +49,4 @@ RUN apt-get update \
 # COPY settings.xml /home/$USERNAME/.m2/settings.xml
 # RUN chown $USERNAME:$USERNAME /home/$USERNAME/.m2
 
-ENV DEBIAN_FRONTEND=dialog
+ENV DEBIAN_FRONTEND=dialog% 
